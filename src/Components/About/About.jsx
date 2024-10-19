@@ -42,7 +42,7 @@ function About() {
         <h1 className='h1'>AND I AM</h1>
         <h1 className='h2'>ABHISHEK. R</h1>
         <p className='para'>
-          Pigs are domesticated animals known for their intelligence and social behavior. They are mammals belonging to the Suidae family and are typically raised for meat production. Pigs are known for their omnivorous diet and their ability to adapt to various environments. They have a keen sense of smell and are often used in areas such as truffle hunting. Pigs are also social animals that live in groups called sounders. Additionally, pigs are known for their strong maternal instincts and their playful nature.
+        self-taught full stack MERN and Python developer, currently in my final year of B.Tech CSE, based in Kerala, India. My experience with startups has enriched my understanding of new tools, teamwork, and solving real-world challenges. At 21, I continue to explore the tech landscape, constantly evolving and adapting to build efficient and impactful solutions. Explore my skills and achievements for more details!
         </p>
       </div>
       
