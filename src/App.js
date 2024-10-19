@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.css'; // Import your CSS file for styling
+import Moon from './Components/Moon/Moon.jsx';
+import LoadingScreen from './Components/LoadingScreen/LoadingScreen.jsx';
+import Skills from './Components/Skills/Skills.jsx';
+import About from './Components/About/About.jsx';
+import Roles from './Components/Roles/Roles.jsx';
+import Webmaster from './Components/Webmaster/Webmaster.jsx';
+import NftCard from './Components/Project/Projects.jsx';
+import Contact from './Components/Contact/Contact.jsx';
+
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Function to be called when loading is complete
+  const handleLoadComplete = () => {
+    setIsLoading(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {isLoading && <LoadingScreen onLoadComplete={handleLoadComplete} />} {/* Show loading screen if isLoading is true */}
+      {!isLoading && ( // Render content only if loading is complete
+        <div className="content">
+
+        <Moon />
+        <About/>
+        <Webmaster/>
+        <Skills/>
+        <NftCard/>
+        <Roles/>
+        <Contact/>
+
+        </div>
+      )}
     </div>
   );
 }

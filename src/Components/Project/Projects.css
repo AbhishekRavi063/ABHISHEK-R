@@ -1,0 +1,294 @@
+/* Hide scrollbar for Webkit browsers */
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.mainn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1300px;
+  width: 100%; /* Ensure it takes the full width */
+  overflow: hidden; /* Ensure the video and content don't overflow */
+  background-image: url('../../Assets/red.jpg');
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image in the div */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.row {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  padding: 2rem;
+  gap: 3rem; /* Gap for spacing between cards */
+  padding-left: 100px;
+  margin-top: -100px;
+  
+}
+
+.ct1 {
+  letter-spacing: 3px;
+  padding-top: 0px;
+  margin-left: 10px;
+  color: white;
+  font-weight: normal;
+}
+.nft:hover{
+  cursor: pointer;
+}
+
+.nft {
+  user-select: none;
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  width: 100%;
+  max-width: 680px; /* Max width to keep it responsive */
+  margin: 5rem auto;
+  border: 1px solid #ffffff22;
+  background-color: #282c34;
+  background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: 0.7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  transition: 0.5s all;
+  scroll-snap-align: start; /* Snap each card into place */
+  margin-top: -10px;
+
+  hr {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #88888855;
+    margin-top: 0;
+  }
+
+  ins {
+    text-decoration: none;
+    letter-spacing: 2px;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+
+    .tokenImage {
+      border-radius: 0.5rem;
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: cover;
+      padding-left: 10px;
+    }
+    
+
+    .description {
+      margin:  0;
+      color: #a89ec9;
+      letter-spacing: 1.8px;
+      margin-left: 10px;
+      margin-top: -10px;
+    }
+
+    .tokenInfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .price {
+        display: flex;
+        align-items: center;
+        color: #ee83e5;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-left: 10px;
+        
+
+        ins {
+          margin-left: -0.3rem;
+          margin-right: 0.5rem;
+        }
+        
+      }
+
+      .duration {
+        display: flex;
+        align-items: center;
+        letter-spacing: 2px;
+        color: #a89ec9;
+        margin-right: 2rem;
+
+        ins {
+          margin: 0.5rem;
+          margin-bottom: 0.4rem;
+        }
+      }
+  
+      .duration:hover{
+        color: #98ee83;
+      }
+      
+      
+    }
+
+    .creator {
+      display: flex;
+      align-items: center;
+    
+      margin-bottom: -0.5rem;
+      letter-spacing: 2px;
+      color: white;
+
+      ins {
+        color: #a89ec9;
+        text-decoration: none;
+      }
+
+      .wrapper {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ffffff22;
+        padding: 0.3rem;
+        margin: 0;
+        margin-right: 0.5rem;
+        border-radius: 100%;
+        box-shadow: inset 0 0 0 4px #000000aa;
+
+        img {
+          border-radius: 100%;
+          border: 1px solid #ffffff22;
+          width: 2rem;
+          height: 2rem;
+          object-fit: cover;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  ::before {
+    position: fixed;
+    content: "";
+    box-shadow: 0 0 100px 40px #ffffff08;
+    top: -10%;
+    left: -100%;
+    transform: rotate(-45deg);
+    height: 60rem;
+    transition: 0.7s all;
+  }
+
+  &:hover {
+    border: 1px solid #ffffff44;
+    box-shadow: 0 7px 50px 10px #000000aa;
+    transform: scale(1.015);
+    filter: brightness(1.3);
+
+    ::before {
+      filter: brightness(0.5);
+      top: -100%;
+      left: 200%;
+    }
+  }
+}
+
+.ph {
+  color: grey;
+  font-size: 150px;
+  padding-bottom: 100px;
+  margin-top: 60px;
+  letter-spacing: 0.7rem;
+}
+.nft a {
+  text-decoration: none; /* Remove underline from the anchor tag */
+  color: inherit; /* Inherit color from parent */
+}
+
+.nft a:hover {
+  color: inherit; /* Maintain color on hover, or customize if needed */
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .ph {
+    font-size: 120px; /* Decrease header size */
+  }
+
+  .row {
+    padding-left: 50px; /* Adjust left padding */
+  }
+}
+
+@media (max-width: 992px) {
+  .ph {
+    font-size: 100px; /* Further decrease header size */
+    padding-bottom: 80px;
+  }
+
+  .nft {
+    max-width: 100%; /* Allow cards to take full width */
+    margin: 3rem auto; /* Adjust margins */
+  }
+
+  .row {
+    gap: 2rem; /* Reduce gap between cards */
+  }
+}
+
+@media (max-width: 768px) {
+  .ph {
+    font-size: 80px; /* Decrease header size further */
+  }
+
+  .row {
+    flex-direction: column; /* Stack cards vertically */
+    padding: 1rem; /* Adjust padding */
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+  .ph {
+    font-size: 40px; /* Smallest header size */
+    margin-top: 50px;
+  }
+
+  .row {
+    flex-direction: row; /* Ensure horizontal layout on smaller screens */
+    padding: 1rem; /* Adjust padding */
+    margin-top: 0; /* Remove negative margin for better alignment */
+  }
+
+  .nft {
+    flex: 0 0 auto; /* Allow cards to remain their width */
+    width: 560px; /* Set a fixed width for cards */
+    padding: 0.1rem; /* Add padding for better spacing */
+  }
+
+  .tokenImage {
+    max-height: 150px; /* Adjust image height */
+  }
+
+  .ct1 {
+    font-size: 14px; /* Reduce title size */
+  }
+
+  .description {
+    font-size: 12px; /* Reduce description size */
+  }
+
+  .creator img {
+    width: 1.5rem; /* Adjust creator image size */
+    height: 1.5rem; /* Adjust creator image size */
+  }
+
+  .creator p {
+    font-size: 12px; /* Reduce creator name size */
+  }
+  .mainn{
+    height: 800px;
+  }
+}

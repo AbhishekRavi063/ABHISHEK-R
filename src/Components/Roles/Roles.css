@@ -1,0 +1,103 @@
+.rolesmain {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Ensure the video and content don't overflow */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.background-video {
+  position: absolute; /* Position it absolutely */
+  top: 50%; /* Center it vertically */
+  left: 50%; /* Center it horizontally */
+  min-width: 100%; /* Ensure it covers the entire container */
+  min-height: 100%;
+  z-index: 0; /* Behind all content */
+  transform: translate(-50%, -50%); /* Center the video */
+  object-fit: cover; /* Cover the entire area */
+}
+
+.role {
+  font-size: 70px; /* Adjust size as needed */
+  text-align: center;
+  color: #fff; /* Ensure the heading color is white */
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); /* Add text shadow for better visibility */
+  margin-top: 100px;
+  z-index: 1;
+  letter-spacing: 0.7rem;
+}
+
+.box {
+  position: relative;
+  z-index: 1; /* Above the video */
+  width: 60%; /* Adjust width as needed */
+  height: auto; /* Allow height to adjust based on content */
+  margin: 20px auto; /* Center the box */
+  padding: 20px; /* Add padding inside the box */
+  backdrop-filter: blur(1px); /* Optional: glass effect */
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 80px;
+}
+
+.box ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  text-align: center; /* Center the list items */
+  
+}
+
+.box li {
+  margin: 15px 0; /* Space between list items */
+  font-size: 1.4rem; /* Adjust font size as needed */
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+  letter-spacing: 2px; /* Increase space between letters */
+  color: white; /* Text color */
+}
+
+.box li::before {
+  content: "•"; /* Space-themed bullet points */
+  color: #f0c674; /* Bullet color */
+  margin-right: 10px; /* Space between bullet and text */
+}
+
+.box li::after {
+  content: "•"; /* Space-themed bullet points */
+  color: #f0c674; /* Bullet color */
+  margin-left: 10px; /* Space between text and bullet */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .role {
+    font-size: 50px; /* Decrease font size for smaller screens */
+    margin-top: 50px; /* Adjust margin */
+  }
+
+  .box {
+    width: 90%; /* Increase width for smaller screens */
+    padding: 10px; /* Adjust padding */
+    margin-top: 40px; /* Adjust margin */
+  }
+
+  .box li {
+    font-size: 1.2rem; /* Decrease font size for list items */
+    margin: 10px 0; /* Reduce margin */
+  }
+}
+
+@media (max-width: 576px) {
+  .role {
+    font-size: 30px; /* Further decrease font size */
+  }
+
+  .box {
+    padding: 5px; /* Further reduce padding */
+  }
+
+  .box li {
+    font-size: 1rem; /* Adjust font size for very small screens */
+  }
+}

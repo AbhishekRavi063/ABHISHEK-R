@@ -1,0 +1,131 @@
+
+.moonmain {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  z-index: 1; /* Keep it above others */
+}
+
+.canvas-container {
+  position: relative;
+  width: 100%; /* Set fixed width */
+  height: 100vh; /* Set fixed height */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  color: white;
+  font-size: 150px;
+  font-weight: 150;
+  z-index: 1;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+  letter-spacing: 5px;
+}
+
+.overlay-text::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  width: 100%;
+  height: 140px;
+  background-color: rgb(226, 154, 20);
+  z-index: -1;
+  transition: left 0.5s ease-in-out;
+  opacity: 0.5;
+}
+
+.overlay-text:hover::before {
+  left: 0;
+}
+
+.overlay-text.top {
+  top: 150px;
+  font-size: 100px;
+}
+
+.overlay-text.bottom {
+  top: 320px;
+}
+
+.arrow-icon {
+  position: absolute;
+  top: calc(50% - -310px);
+  left: calc(50% - 50px);
+  font-size: 30px;
+  color: rgb(238, 244, 244);
+  opacity: 0.2;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+  
+}
+.canvas-container:hover {
+  cursor:grab; /* Change cursor to grabbing when hovering the moon */
+}
+
+.moonm:hover .arrow-icon {
+  opacity: 0.2;
+}
+
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .overlay-text {
+    font-size: 50px; /* Smaller text for mobile */
+  }
+
+  .overlay-text.top {
+    font-size: 40px; /* Smaller top text */
+    top: 20%; /* Position adjustments */
+  }
+
+  .overlay-text.bottom {
+    font-size: 40px; /* Smaller bottom text */
+    top: 50%; /* Position adjustments */
+  }
+
+  .arrow-icon {
+    font-size: 20px; /* Smaller icon for mobile */
+    top: calc(50% + 100px); /* Position adjustments */
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-text {
+    font-size: 35px; /* Further reduce text for smaller devices */
+  }
+
+  .overlay-text.top {
+    font-size: 60px; /* Further reduce top text */
+    left: 50px;
+    top: 10%; /* Position adjustments */
+  }
+
+  .overlay-text.bottom {
+    font-size: 60px; /* Further reduce bottom text */
+    top: 250px; /* Position adjustments */
+    left: 50px;
+  }
+
+  .arrow-icon {
+    font-size: 18px; /* Further reduce icon */
+    top: calc(70% + 70px); /* Position adjustments */
+  }
+  .moonmain {
+    height: 90vh;
+    width: 100%;
+    z-index: 1; /* Keep it above others */
+  }
+}
+
+

@@ -1,0 +1,60 @@
+.contactmain {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Background set to black */
+  }
+  
+  .glassbox {
+    width: 50%;
+    height: 100px;
+    background: black; /* Transparent background */
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.4s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .glassbox:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+
+.gmail{
+    color: gray;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    letter-spacing: 5px;
+}
+  
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .glassbox {
+    width: 80%; /* Increase width for smaller screens */
+    height: 80px; /* Decrease height */
+  }
+
+  .gmail {
+    font-size: 24px; /* Decrease font size */
+    letter-spacing: 3px; /* Decrease letter spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .glassbox {
+    width: 90%; /* Full width for very small screens */
+    height: 70px; /* Decrease height further */
+  }
+
+  .gmail {
+    font-size: 15px; /* Further decrease font size */
+    letter-spacing: 2px; /* Further decrease letter spacing */
+    margin-top: 25px; /* Decrease margin */
+  }
+}

@@ -1,0 +1,94 @@
+.webmain {
+    position: relative;
+    width: 100%;
+    height: 110vh; /* Occupies the full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent any content from overflowing */
+  }
+  
+  .background-video {
+    position: absolute; /* Position it absolutely within the section */
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    width: 100%; /* Set to 100% to ensure full coverage */
+    height: 100%; /* Set to 100% to ensure full coverage */
+    z-index: 0; /* Ensure it stays behind other content */
+    transform: translate(-50%, -50%); /* Center the video */
+    object-fit: cover; /* Cover the entire area, may crop */
+    /* If you want to see the full video without cropping, consider changing object-fit to contain */
+  }
+  
+  .text-container {
+    position: absolute;
+    top: 60%; /* Position the text container */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure text is above the background video */
+    pointer-events: none;
+    color: palegoldenrod;
+    background-color: transparent;
+    user-select: none;
+    overflow: hidden;
+    letter-spacing: 10px;
+  }
+  
+  .aka {
+    width: 1000px;
+    line-height: 130px;
+    font-size: 130px;
+    color: palegoldenrod;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect for .hhh text */
+  }
+  
+  .webmaster {
+    margin-top: 60px;
+    font-size: 200px;
+    line-height: 180px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out 0.5s, transform 1s ease-out 0.5s;
+    text-shadow: 20px 10px 10px rgba(0, 0, 0, 0.5); /* Shadow effect for .hh2 text */
+  }
+  
+  .webmaster.fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+
+/* Media Queries for additional responsiveness */
+@media (max-width: 768px) {
+  .webmain {
+    height: 100vh; /* Adjust height for smaller screens */
+  }
+
+  .aka {
+    line-height: 100px; /* Adjust line height */
+    font-size: 8vw; /* Responsive font size for smaller screens */
+  }
+
+  .webmaster {
+    font-size: 12vw; /* Responsive font size for smaller screens */
+    line-height: 150px; /* Adjust line height */
+  }
+}
+
+@media (max-width: 480px) {
+  .aka {
+    margin-left: 700px;
+    font-size: 70px;
+    line-height: 0px;
+  }
+
+  .webmaster {
+    margin-left: 540px;
+    padding-bottom: 50px;
+    line-height: 100px;
+  }
+  
+ 
+}

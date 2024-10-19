@@ -1,0 +1,128 @@
+.aboutmain {
+  height: 110vh; /* Adjust this as needed */
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Add relative positioning */
+  overflow: hidden; /* Ensure no overflow from the video */
+}
+
+.background-video {
+  position: absolute; /* Position it absolutely */
+  top: 50%; /* Center it vertically */
+  left: 50%; /* Center it horizontally */
+  width: 100%; /* Ensure it covers the entire container */
+  height: 100%; /* Ensure it covers the entire container */
+  z-index: 0; /* Behind all content */
+  transform: translate(-50%, -50%); /* Center the video */
+  object-fit: cover; /* Cover the entire area, but it may crop */
+}
+
+.about {
+  max-width: 700px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  z-index: 1; /* Above the video */
+  
+}
+
+.about.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.para {
+  color: white;
+  letter-spacing: 5px;
+}
+
+.h2 {
+  font-size: 95px;
+  margin-top: -50px;
+  color: gray;
+  letter-spacing: 5px;
+}
+
+.h1 {
+  font-size: 85px;
+  letter-spacing: 5px;
+}
+
+.pic {
+  position: relative;
+  display: inline-block;
+  margin-left: 200px;
+  margin-top: 100px;
+}
+
+.apic {
+  height: 500px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.pic::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .aboutmain {
+    height: 100vh; /* Adjust height for mobile */
+  }
+
+  .h1, .h2 {
+    font-size: 40px; /* Adjust font size for mobile */
+    letter-spacing: 3px; /* Reduce letter spacing */
+  }
+
+  .para {
+    font-size: 16px; /* Adjust paragraph font size */
+    letter-spacing: 2px; /* Reduce letter spacing */
+    padding: 0 20px; /* Add padding for mobile */
+  }
+
+  .pic {
+    margin-left: 0; /* Center the picture on mobile */
+    margin-top: 20px; /* Adjust margin for mobile */
+  }
+
+  .apic {
+    height: 300px; /* Adjust image height for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 40px; /* Further adjust font size for smaller screens */
+    padding-left: 20px;
+    padding-bottom: 40px;
+    
+  }
+  .h2 {
+    font-size: 40px; /* Further adjust font size for smaller screens */
+    margin-left: 20px;
+  }
+
+
+  .para {
+    font-size: 14px; /* Further adjust paragraph font size */
+  }
+
+  .apic {
+    height: 200px; /* Adjust image height for very small screens */
+  }
+}

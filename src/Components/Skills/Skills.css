@@ -1,0 +1,151 @@
+.logo-game-container {
+  text-align: center;
+  height: 1000px;
+  width: 100%;
+  background-size: auto; /*  Set to auto for the image to maintain its original size */
+  background-position: center; /*  Centers the background image */
+  background-repeat: repeat; /*  Allows the image to repeat both horizontally and vertically */
+}
+
+.logo-grid {
+  
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  gap: 20px; /* Space between items */
+  margin: 20px 0;
+  margin-top: 50px;
+}
+.match{
+  margin-top: 30px;
+  font-size: 30px;
+  color: black;
+  letter-spacing: 2px;
+}
+
+.know{
+  font-size: 80px;
+  font-weight: 600;
+  color: black;
+  padding-top: 50px;
+  letter-spacing: 0.7rem;
+}
+.points{
+  color: rgb(16, 164, 34);
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -40px;
+  letter-spacing: 2px;
+}
+
+.logo-item {
+  padding: 10px; /* Increase padding for larger draggable area */
+   /* Dashed border for drag area */
+  border-radius: 8px; /* Optional: add rounded corners */
+  display: flex; /* Flexbox to align logo and name */
+  flex-direction: column; /* Stack logo and name vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  min-height: 100px; /* Minimum height for drag area */
+  width: 120px; /* Set a narrower width for the draggable area */
+  margin: 0 auto; /* Center the items horizontally */
+}
+
+.logo {
+  width: 70px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+  cursor: grab;
+}
+
+.logo-name {
+  margin-top: 8px; /* Space between logo and name */
+  text-align: center; /* Center the name text */
+  color: black;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+button {
+  margin-top: 10px; /* Space above the button */
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  letter-spacing: 5px;
+  background: transparent;
+  border: none;
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .logo-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+  }
+
+  .know {
+    font-size: 60px; /* Smaller font size for medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .logo-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+  }
+
+  .know {
+    font-size: 50px; /* Smaller font size for smaller screens */
+  }
+
+  .match {
+    font-size: 24px; /* Smaller match text */
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+
+  .know {
+    font-size: 40px; /* Further reduce font size */
+  }
+
+  .logo-item {
+    width: 90px; /* Adjust logo item width */
+  }
+
+  button {
+    font-size: 24px; /* Smaller button font size */
+  }
+}
+
+
+@media (max-width: 576px) {
+  .know {
+    font-size: 30px; /* Further reduce font size */
+  }
+
+  .points {
+    font-size: 18px; /* Smaller points font size */
+  }
+
+  .logo {
+    width: 30px; /* Further reduce logo size for mobile */
+  }
+
+  .logo-name {
+    font-size: 12px; /* Further reduce logo name size for mobile */
+  }
+  .logo-game-container{
+    height: auto;
+  }
+  button {
+    display: none; /* Hide button on mobile */
+  }
+  .match{
+    display: none;
+  }
+}
